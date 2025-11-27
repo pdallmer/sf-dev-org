@@ -1,0 +1,27 @@
+/* Container styles */
+.slds-align_absolute-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure proper spacing for error icon */
+lightning-icon {
+    vertical-align: middle;
+}
+
+/* Responsive table container */
+lightning-datatable {
+    width: 100%;
+}
+
+/* Empty state styling */
+.slds-illustration {
+    padding: 1rem;
+}
+
+/* Configuration message styling */
+.slds-text-heading_medium {
+    font-size: 1rem;
+    line-height: 1.5;
+}

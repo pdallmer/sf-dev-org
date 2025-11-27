@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Data Graph Viewer</masterLabel>
+    <description>Displays Data Cloud records using Data Graphs on Unified Individual record pages</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="graphName" type="String" label="Graph Name" 
+                      description="API name of the Data Graph to query (e.g., CustomerEngagementGraph)" 
+                      required="true" />
+            <property name="rootDmo" type="String" label="Root DMO" 
+                      description="Root DMO to query from without __dll suffix (e.g., EngagementEvent)" 
+                      required="true" />
+            <property name="selectFields" type="String" label="Select Fields" 
+                      description="Comma-separated list of fields to query (e.g., EventType__c, EventDate__c, Channel__c)" 
+                      required="true" />
+            <property name="columnConfig" type="String" label="Column Configuration (JSON)" 
+                      description="Optional JSON array for custom column configuration. Leave blank for auto-generation." />
+            <property name="title" type="String" label="Card Title" 
+                      description="Title to display on the component card" 
+                      default="Data Cloud Records" />
+            <property name="maxRows" type="Integer" label="Max Rows" 
+                      description="Maximum number of rows to display" 
+                      default="50" 
+                      min="1" 
+                      max="2000" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
